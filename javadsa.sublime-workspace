@@ -1,0 +1,336 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ma",
+				"MagicNumber"
+			],
+			[
+				"PL",
+				"pl\tprintln"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"v",
+				"void"
+			],
+			[
+				"cl",
+				"class\tjavaClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/ansh/Documents/DSA-Bootcamp-Java-main/lectures/17-oop/notes/classes.txt",
+			"settings":
+			{
+				"buffer_size": 3639,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/BuildSystem/Project_Java.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/BuildSystem/CompetitiveJava.sublime-build",
+					""
+				],
+				[
+					"Packages/User/BuildSystem/java_run.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/BuildSystem/java_run.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/BuildSystem/CompetitiveJava.sublime-build",
+					""
+				],
+				[
+					"Packages/User/BuildSystem/java_run.sublime-build",
+					""
+				],
+				[
+					"Packages/User/BuildSystem/Project_Java.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/BuildSystem/Project_Java.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"cool",
+				"CoolFormat: Formatter Settings"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"form",
+				"Formatter: Open Config Folders"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 395.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/mnt/study/DSA"
+	],
+	"file_history":
+	[
+		"/home/ansh/Documents/DSA-Bootcamp-Java-main/lectures/17-oop/notes/notes.txt",
+		"/mnt/study/DSA/Maths/EvenOdd.java",
+		"/home/ansh/.config/sublime-text/Packages/User/BuildSystem/Project_Java.sublime-build",
+		"/mnt/study/DSA/javadsa.sublime-project",
+		"/home/ansh/.config/sublime-text/Packages/User/Formatter.quick-options",
+		"/mnt/study/DSA/Java/Learning/BitManipulation.java",
+		"/mnt/study/DSA/Maths/MagicNumber.java",
+		"/mnt/study/DSA/Java/Leetcode/MisiingNumber.java",
+		"/mnt/study/DSA/Java/Learning/SingleLinkList.java",
+		"/mnt/study/DSA/Java/Learning/ArrayFunction.java",
+		"/mnt/study/DSA/Java/Learning/SortingAlgorithmsDemo.java",
+		"/mnt/study/DSA/Java/Learning/StringBuilderDemo.java",
+		"/mnt/study/DSA/Java/Leetcode/PositiveMissing.java",
+		"/mnt/study/DSA/Java/Leetcode/findDuplicate.java",
+		"/mnt/study/DSA/Java/Learning/StringFunctionsDemo.java",
+		"/home/ansh/.config/sublime-text/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
+		"/mnt/study/DSA/Java/LinkedList/SingleLinkList.java"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\tpublic static int setBits(int num, int pos){\n\t\tnum |= (1 << pos) ;\n\t\treturn num;\n\t}",
+			"\tpublic static byte ithBits(int num, int pos){\n\t\tbyte val=(byte)((num & (1 << pos))>>pos) ;\n\t\treturn val;\n\t}\n\t\n",
+			"xorvl",
+			"LinkedList"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/ansh/Documents/DSA-Bootcamp-Java-main/lectures/17-oop/notes/classes.txt",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "javadsa.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
