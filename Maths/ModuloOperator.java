@@ -1,4 +1,3 @@
-package Maths;
 
 /**
  * The modulo operator, denoted by `%` in many programming languages including

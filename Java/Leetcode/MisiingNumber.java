@@ -1,4 +1,3 @@
-package Java.Leetcode;
 
 public class MisiingNumber {
     public static void main(String[] args) {

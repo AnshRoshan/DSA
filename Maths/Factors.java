@@ -1,15 +1,13 @@
-package Maths;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Factors {
+
     public static void main(String[] args) {
         int n = 10;
         factorsOptimised(n);
         primeFactors(n);
         factors(n);
-
     }
 
     /**
@@ -32,7 +30,7 @@ public class Factors {
      *          Prints all the prime factors of a number
      * @time O(sqrt(n))
      * @space O(1)
-     * 
+     *
      */
     static void primeFactors(int n) {
         for (int i = 2; i * i <= n; i++) {
@@ -59,13 +57,11 @@ public class Factors {
         for (int i = 1; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
                 primeList.add(i);
-                if (num == i * i)
-                    continue;
+                if (num == i * i) continue;
                 primeListRight.add(num / i);
             }
         }
-        primeList.addAll(primeListRight.reversed());
+        primeList.addAll(primeListRight);
         System.out.println(primeList.toString());
     }
-
 }

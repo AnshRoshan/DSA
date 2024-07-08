@@ -1,4 +1,3 @@
-package Java.Learning;
 
 public class IntegerMethods {
     public static void main(String[] args) {

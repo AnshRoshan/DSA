@@ -1,4 +1,3 @@
-package Maths;
 
 public class HCFLCM {
 

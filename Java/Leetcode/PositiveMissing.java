@@ -1,4 +1,3 @@
-package Java.Leetcode;
 
 public class PositiveMissing {
 	public static void main(String[] args) {

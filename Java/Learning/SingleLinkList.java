@@ -1,4 +1,3 @@
-package Java.Learning;
 
 // Define the Node class representing each node in the linked list
 class Node {

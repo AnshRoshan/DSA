@@ -1,11 +1,10 @@
-package Maths;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class PrimeAlgorithmsComparison {
+
     // Sieve of Sundaram to generate prime numbers up to a given limit
     public static List<Integer> sieveOfSundaram(int limit) {
         int n = (limit - 2) / 2;
@@ -98,10 +97,8 @@ public class PrimeAlgorithmsComparison {
 
     // Method to check if a number is prime using Miller-Rabin primality test
     public static boolean isPrimeMillerRabin(int n, int k) {
-        if (n <= 1 || n == 4)
-            return false;
-        if (n <= 3)
-            return true;
+        if (n <= 1 || n == 4) return false;
+        if (n <= 3) return true;
 
         int d = n - 1;
         while (d % 2 == 0) {
@@ -120,15 +117,12 @@ public class PrimeAlgorithmsComparison {
 
     private static boolean millerRabinCheck(int a, int d, int n) {
         int x = power(a, d, n);
-        if (x == 1 || x == n - 1)
-            return true;
+        if (x == 1 || x == n - 1) return true;
         while (d != n - 1) {
             x = (x * x) % n;
             d *= 2;
-            if (x == 1)
-                return false;
-            if (x == n - 1)
-                return true;
+            if (x == 1) return false;
+            if (x == n - 1) return true;
         }
         return false;
     }
@@ -149,7 +143,7 @@ public class PrimeAlgorithmsComparison {
 
     public static void main(String[] args) {
         int limit = 30000; // Upper limit for generating prime numbers
-        int iterations = 5; // Number of iterations for Miller-Rabin test
+        // int iterations = 5; // Number of iterations for Miller-Rabin test
 
         long startTime, endTime;
         List<Integer> primes;
@@ -158,25 +152,40 @@ public class PrimeAlgorithmsComparison {
         startTime = System.nanoTime();
         primes = sieveOfSundaram(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Sieve of Sundaram: " + (endTime - startTime) / 1e6 + " milliseconds");
-
+        System.out.println(
+            "Time taken by Sieve of Sundaram: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
+        System.out.println(primes);
         // Measure time taken by Sieve of Eratosthenes
         startTime = System.nanoTime();
         primes = sieveOfEratosthenes(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Sieve of Eratosthenes: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Sieve of Eratosthenes: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Sieve of Atkin
         startTime = System.nanoTime();
         primes = sieveOfAtkin(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Sieve of Atkin: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Sieve of Atkin: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Miller-Rabin primality test
         startTime = System.nanoTime();
         // boolean isPrime = isPrimeMillerRabin(limit, iterations);
         endTime = System.nanoTime();
-        System.out
-                .println("Time taken by Miller-Rabin primality test: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Miller-Rabin primality test: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
     }
 }

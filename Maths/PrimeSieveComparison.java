@@ -1,5 +1,3 @@
-package Maths;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -45,7 +43,8 @@ public class PrimeSieveComparison {
             int end = Math.min(start + segmentSize * 2 - 1, limit);
 
             for (int p : primes) {
-                int startIdx = (start + p - 1) / p * p - start;
+                int startIdx = ((start + p - 1) / p) * p - start;
+                System.out.println(startIdx);
                 for (int j = Math.max(p * p, start); j <= end; j += p) {
                     isPrime[j - start] = false;
                 }
@@ -114,20 +113,21 @@ public class PrimeSieveComparison {
         int[] wheel = { 2, 3, 5 }; // Primes to skip multiples of
         int[] offsets = { 4, 2, 4, 2, 4, 6, 2, 6 }; // Offsets for the wheel
 
-        for (int num = 7, wheelIndex = 0; num <= limit; num += offsets[wheelIndex++]) {
+        for (
+            int num = 7, wheelIndex = 0;
+            num <= limit;
+            num += offsets[wheelIndex++]
+        ) {
             if (!isComposite[num]) {
                 primes.add(num);
-                if (wheelIndex == 8)
-                    wheelIndex = 0; // Reset wheel index
+                if (wheelIndex == 8) wheelIndex = 0; // Reset wheel index
                 for (int i = 0; i < wheel.length; i++) {
                     int multiple = num * wheel[i];
-                    if (multiple > limit)
-                        break;
+                    if (multiple > limit) break;
                     isComposite[multiple] = true;
                 }
             }
-            if (wheelIndex == 8)
-                wheelIndex = 0; // Reset wheel index
+            if (wheelIndex == 8) wheelIndex = 0; // Reset wheel index
         }
 
         return primes;
@@ -169,7 +169,11 @@ public class PrimeSieveComparison {
         List<Integer> primes = new ArrayList<>();
 
         for (int p = 2; p * p <= end; p++) {
-            for (int i = Math.max(p * p, (start + p - 1) / p * p); i <= end; i += p) {
+            for (
+                int i = Math.max(p * p, ((start + p - 1) / p) * p);
+                i <= end;
+                i += p
+            ) {
                 isPrime[i - start] = false;
             }
         }
@@ -186,16 +190,12 @@ public class PrimeSieveComparison {
     // Prime Number Formulae
     public static List<Integer> primeNumberFormulae(int limit) {
         List<Integer> primes = new ArrayList<>();
-        if (limit >= 2)
-            primes.add(2);
-        if (limit >= 3)
-            primes.add(3);
+        if (limit >= 2) primes.add(2);
+        if (limit >= 3) primes.add(3);
 
         for (int num = 5; num <= limit; num += 6) {
-            if (isPrime(num))
-                primes.add(num);
-            if (num + 2 <= limit && isPrime(num + 2))
-                primes.add(num + 2);
+            if (isPrime(num)) primes.add(num);
+            if (num + 2 <= limit && isPrime(num + 2)) primes.add(num + 2);
         }
 
         return primes;
@@ -203,16 +203,12 @@ public class PrimeSieveComparison {
 
     // Check if a number is prime using trial division
     public static boolean isPrime(int num) {
-        if (num <= 1)
-            return false;
-        if (num <= 3)
-            return true;
-        if (num % 2 == 0 || num % 3 == 0)
-            return false;
+        if (num <= 1) return false;
+        if (num <= 3) return true;
+        if (num % 2 == 0 || num % 3 == 0) return false;
 
         for (int i = 5; i * i <= num; i += 6) {
-            if (num % i == 0 || num % (i + 2) == 0)
-                return false;
+            if (num % i == 0 || num % (i + 2) == 0) return false;
         }
 
         return true;
@@ -227,7 +223,11 @@ public class PrimeSieveComparison {
         startTime = System.nanoTime();
         sieveOfEratosthenes(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Sieve of Eratosthenes: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Sieve of Eratosthenes: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Segmented Sieve
         // startTime = System.nanoTime();
@@ -240,26 +240,40 @@ public class PrimeSieveComparison {
         startTime = System.nanoTime();
         sieveOfAtkin(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Sieve of Atkin: " + (endTime - startTime) /
-                1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Sieve of Atkin: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Wheel Sieve
         startTime = System.nanoTime();
         wheelSieve(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Wheel Sieve: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Wheel Sieve: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Parallel Sieve Algorithm
         startTime = System.nanoTime();
         parallelSieve(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Parallel Sieve Algorithm: " + (endTime - startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Parallel Sieve Algorithm: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
 
         // Measure time taken by Prime Number Formulae
         startTime = System.nanoTime();
         primeNumberFormulae(limit);
         endTime = System.nanoTime();
-        System.out.println("Time taken by Prime Number Formulae: " + (endTime -
-                startTime) / 1e6 + " milliseconds");
+        System.out.println(
+            "Time taken by Prime Number Formulae: " +
+            (endTime - startTime) / 1e6 +
+            " milliseconds"
+        );
     }
 }
